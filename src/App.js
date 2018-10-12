@@ -18,11 +18,7 @@ class App extends Component {
         <div>Loading...</div>
       )
     }
-    if(this.props.error){
-      return (
-        <div>{this.props.error}</div>
-      )
-    }
+  
     return (
       <div className="App">
       <h1>CHEEEEEESE GROMMIT!</h1>
