@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import CheeseList from './cheese-list';
+import { connect } from 'react-redux';
+import {fetchCheeses} from './actions/cheese'
 
 class App extends Component {
   render() {
@@ -15,4 +17,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect()(App);
