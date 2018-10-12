@@ -2,7 +2,7 @@ import {FETCH_CHEESE_SUCCESS, FETCH_CHEESE_REQUEST, FETCH_CHEESE_ERROR} from '..
 
 
 const initialState={
-        cheeses: [],
+        cheeses: ['hello'],
         loading: false,
         error: null
     
