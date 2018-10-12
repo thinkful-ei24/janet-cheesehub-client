@@ -1,10 +1,13 @@
 //cheese Actions
-
+import {API_BASE_URL} from '../config';
 export const fetchCheeses = ()=>(dispatch)=>{
-fetch('http://localhost:8080/api/cheeses')
+fetch(`${API_BASE_URL}/api/cheeses`)
 .then(res=>res.json())
 .then(res=>dispatch(fetchCheeseSuccess(res)))
-.catch(error=>console.log(error))
+.catch(error=>{
+    console.log(error);
+    dispatch(fetchCheeseError(error))
+})
 }
 
 export const FETCH_CHEESE_REQUEST = 'FETCH_CHEESE_REQUEST'
