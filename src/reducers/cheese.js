@@ -1,19 +1,19 @@
-import {FETCH_USER_SUCCESS, FETCH_USER_REQUEST, FETCH_USER_ERROR} from '../actions/cheese'
-import { isNull } from 'util';
+import {FETCH_CHEESE_SUCCESS, FETCH_CHEESE_REQUEST, FETCH_CHEESE_ERROR} from '../actions/cheese'
+
 
 const initialState={
-        cheeses: [],
+        cheeses: ['hello'],
         loading: false,
         error: null
     
 };
 
 export const cheeseReducer = (state=initialState, action)=>{
-    if (action.type ===FETCH_USER_REQUEST ){
+    if (action.type ===FETCH_CHEESE_REQUEST ){
         return Object.assign({}, state, {loading:true})
-    } else if (action.type ===FETCH_USER_SUCCESS ){
+    } else if (action.type ===FETCH_CHEESE_SUCCESS ){
         return Object.assign({}, state, {loading:false, error:null, cheeses: action.cheeses})
-    }else if (action.type ===FETCH_USER_ERROR ){
+    }else if (action.type ===FETCH_CHEESE_ERROR ){
         return Object.assign({}, state, {loading:false, error:action.error})
     }
     return state;

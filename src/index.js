@@ -5,9 +5,10 @@ import App from './App';
 import * as serviceWorker from './serviceWorker';
 import { Provider } from 'react-redux';
 import store from './store';
-import { privateDecrypt } from 'crypto';
+
 
 ReactDOM.render(
+
     <Provider store = {store}>
         <App />
     </Provider>,
