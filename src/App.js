@@ -15,7 +15,9 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <CheeseList cheeseList={this.props.cheeses}/>
+      <h1>CHEEEEEESE GROMMIT!</h1>
+      <img src='https://singlecut.com/wp-content/uploads/2013/03/wallacegromitcheese.jpg' alt='Wallace and Grommit' />
+        <CheeseList className = 'ulList' liClass = 'liList' cheeseList={this.props.cheeses}/>
       </div>
     );
   }

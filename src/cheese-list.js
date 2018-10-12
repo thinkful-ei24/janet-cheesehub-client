@@ -4,9 +4,9 @@ export default function CheeseList(props){
 
 
     return (
-		<ul>
+		<ul className = {props.className}>
 			{props.cheeseList.map((cheese,index) => (
-				<li key={index}>{cheese}</li>
+				<li className = {props.liClass} key={index}>{cheese}</li>
 			))}
 		</ul>
 	);

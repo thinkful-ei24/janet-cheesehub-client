@@ -30,3 +30,13 @@
     transform: rotate(360deg);
   }
 }
+
+.ulList{
+list-style: none;
+padding: 50px;
+}
+
+.liList{
+  padding: 10px;
+
+}
